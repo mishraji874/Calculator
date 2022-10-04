@@ -1,0 +1,21 @@
+var screen = document.querySelector('#screen'); //returns the first element
+var btn = document.querySelectorAll('btn'); //returns all elements
+
+//For getting the value of btn, here we use for loop
+
+for(item of btn) {
+    item.addEventListener('click', (e) {
+        if(btntext =='x') {
+            btntext = '*';
+        }
+
+        if(btntext == '%') {
+            btntext = '/';
+        }
+        screen.value += btntext;
+    });
+}
+
+function sin() {screen.value = Math.sin(screen.value)};
+function cos() {screen.value = Math.cos(screen.value)};
+function tan() {screen.value = Math.tan(screen.value)};
